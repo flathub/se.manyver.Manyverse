@@ -16,7 +16,6 @@ finish-args:
   - --allow=bluetooth
   # full filesystem access is needed in order for the user to be able to browse and upload files from their filesystem
   - --filesystem=home:ro
-  - --filesystem=xdg-config/manyverse
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.portal.Background
   - --own-name=org.kde.*
