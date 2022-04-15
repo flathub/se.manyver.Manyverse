@@ -9,16 +9,12 @@ separate-locales: false
 rename-desktop-file: manyverse.desktop
 rename-icon: manyverse
 finish-args:
+  - --share=ipc
   - --socket=x11
-  - --socket=wayland
   - --socket=pulseaudio
   - --share=network
-  - --allow=bluetooth
-  # full filesystem access is needed in order for the user to be able to browse and upload files from their filesystem
+  # full readonly home access is needed in order for the user to be able to browse and upload files from their filesystem
   - --filesystem=home:ro
-  - --talk-name=org.freedesktop.Notifications
-  - --talk-name=org.freedesktop.portal.Background
-  - --own-name=org.kde.*
 modules:
   - name: manyverse-desktop
     buildsystem: simple
