@@ -37,8 +37,8 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/staltz/manyverse/releases/download/v0.2210.3-beta/manyverse_0.2210.3-beta_amd64.deb
-        sha256: c6deb69918b95fca0e4df68c602947f2a803db7f24cca1a918a0f1c52b8808ed
+        url: https://github.com/staltz/manyverse/releases/download/v0.2211.4-beta/manyverse_0.2211.4-beta_amd64.deb
+        sha256: f53a93b04abaf136c69b68c02d797648ff14118f2a9b392a556bc3eef5e5b063
         # This will allow automatic new version detection using the flatpack-external-data-checker (see https://github.com/flathub/flatpak-external-data-checker)
         x-checker-data:
           type: json
@@ -46,7 +46,8 @@ modules:
           tag-query: .[0] | .tag_name
           timestamp-query: .[0] | .published_at
           version-query: $tag | sub("^v"; "")
-          url-query: .[0] | .assets[] | select(.name=="manyverse_" + $version + "_amd64.deb") | .browser_download_url
+          url-query: .[0] | .assets[] | select(.name=="manyverse_" + $version + "_amd64.deb")
+            | .browser_download_url
 
       # the script that will actually be run to start the application
       - type: script
