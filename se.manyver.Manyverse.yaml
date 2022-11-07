@@ -46,7 +46,7 @@ modules:
           tag-query: .name
           timestamp-query: .published_at
           version-query: .name
-          url-query: .assets[] | select(.name=="manyverse_" + $version + ".tar.gz") | .browser_download_url
+          url-query: .assets[] | select(.name=="manyverse_" + $version + "_amd64.deb") | .browser_download_url
 
       # the script that will actually be run to start the application
       - type: script
