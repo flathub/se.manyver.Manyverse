@@ -41,11 +41,12 @@ modules:
         sha256: 2ceb1cb8cceb62584bd74aac276380af2663c172490d0854f0a30c2606801c7c
         # This will allow automatic new version detection using the flatpack-external-data-checker (see https://github.com/flathub/flatpak-external-data-checker)
         x-checker-data:
-          type: html
-          url: https://github.com/staltz/manyverse/releases
-          version-pattern: manyverse_(.*)_amd64.deb
-          url-template: https://github.com/staltz/manyverse/releases/download/v${version}/manyverse_${version}_amd64.deb
-
+          type: json
+          url: https://api.github.com/repos/staltz/manyverse/releases
+          tag-query: .name
+          timestamp-query: .published_at
+          version-query: .name
+          url-query: .assets[] | select(.name=="manyverse_" + $version + ".tar.gz") | .browser_download_url
 
       # the script that will actually be run to start the application
       - type: script
