@@ -43,7 +43,7 @@ modules:
         x-checker-data:
           type: json
           url: https://api.github.com/repos/staltz/manyverse/releases
-          tag-query: .tag_name
+          tag-query: .[0] | .tag_name
           timestamp-query: .published_at
           version-query: $tag | sub("^v"; "")
           url-query: .assets[] | select(.name=="manyverse_" + $version + "_amd64.deb") | .browser_download_url
