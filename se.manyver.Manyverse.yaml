@@ -44,7 +44,7 @@ modules:
           type: json
           url: https://api.github.com/repos/staltz/manyverse/releases
           tag-query: .[0] | .tag_name
-          timestamp-query: .published_at
+          timestamp-query: .[0] | .published_at
           version-query: $tag | sub("^v"; "")
           url-query: .[0] | .assets[] | select(.name=="manyverse_" + $version + "_amd64.deb") | .browser_download_url
 
