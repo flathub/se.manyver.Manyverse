@@ -45,7 +45,7 @@ modules:
           url: https://api.github.com/repos/staltz/manyverse/releases
           tag-query: .name
           timestamp-query: .published_at
-          version-query: .name
+          version-query: $tag
           url-query: .assets[] | select(.name=="manyverse_" + $version + "_amd64.deb") | .browser_download_url
 
       # the script that will actually be run to start the application
