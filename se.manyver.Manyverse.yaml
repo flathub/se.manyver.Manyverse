@@ -37,8 +37,8 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/staltz/manyverse/releases/download/v0.2303.3-beta/manyverse_0.2303.3-beta_amd64.deb
-        sha256: 888321688977b1e241964151517c3b7e376a2b8f9bbcae70c45a32131fb6485c
+        url: https://github.com/staltz/manyverse/releases/download/v0.2304.3-beta/manyverse_0.2304.3-beta_amd64.deb
+        sha256: f8765f1495e30b2f72271f1ae32823b58488a67b780c8353e08412ca6fb71cb0
         # This will allow automatic new version detection using the flatpack-external-data-checker (see https://github.com/flathub/flatpak-external-data-checker)
         x-checker-data:
           type: json
