@@ -68,6 +68,10 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.2407.28-beta" date="2024-08-07">
+      <url type="details">https://github.com/staltz/manyverse/releases/tag/v0.2407.28-beta</url>
+      <description></description>
+    </release>
     <release version="0.2310.9-beta" date="2023-10-09"/>
     <release version="0.2310.3-beta" date="2023-10-03"/>
     <release version="0.2309.4-beta" date="2023-09-04"/>
